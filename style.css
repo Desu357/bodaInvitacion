@@ -1,9 +1,10 @@
-/* --pink, --bg, --shadow is variable */
-
 :root {
   --pink: #f14e95;
+  --terracota: #c77742;
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --white: #fff;
+  --black: #000;
 }
 
 body {
@@ -12,6 +13,29 @@ body {
   min-height: 4000px;
 }
 
+.titulo-portada {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--terracota);
+  font-size: 3rem;
+}
+
+.parrafo-portada {
+  font-style: bold;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.subtitulo-header {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 .hero::before {
   content: "";
   position: absolute;
@@ -19,11 +43,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/bg-preview.jpg);
+  background-image: url(img/BodaDoble.webp);
   background-size: cover;
   background-position: center;
   z-index: -1;
-  filter: grayscale();
 }
 
 .hero {
@@ -31,33 +54,14 @@ body {
   min-height: 100vh;
 }
 
-.hero h1,
-.hero h4,
-.hero p {
-  text-shadow: var(--shadow);
-}
-
-.hero h1 {
-  font-family: "Sacramento", cursive;
-  font-size: 6rem;
-}
-
-.hero h4 {
-  font-size: 1.6rem;
-}
-
-.hero p {
-  font-size: 1.4rem;
-}
-
 .hero a {
-  color: var(--pink);
+  color: var(--terracota);
   background-color: white;
   box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-  background-color: var(--pink);
+  background-color: var(--terracota);
   color: white;
 }
 
@@ -71,14 +75,9 @@ body {
   height: 100vh;
 }
 
-/* 
-.mynavbar .navbar-brand, .mynavbar .offcanvas-title: 
-This selector targets elements with the class .navbar-brand or .offcanvas-title 
-that are children of an element with the class .mynavbar.
-*/
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
+  font-family: "Playfair Display", cursive;
   font-size: 3.2rem;
   font-weight: bold;
 }
@@ -102,8 +101,8 @@ that are children of an element with the class .mynavbar.
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
-  color: var(--pink);
-  font-family: "Sacramento";
+  color: var(--terracota);
+  font-family: "Playfair Display";
   font-size: 5rem;
   font-weight: bold;
 }
@@ -124,9 +123,9 @@ that are children of an element with the class .mynavbar.
 }
 
 .home .couple h3 {
-  font-family: "Sacramento";
+  font-family: "Playfair Display";
   font-size: 2.4rem;
-  color: var(--pink);
+  color: var(--terracota);
 }
 
 .home .couple img {
@@ -166,23 +165,23 @@ that are children of an element with the class .mynavbar.
   font-weight: 300;
 }
 
-.info .card {
+.card {
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: white !important;
   border: 1px solid #999;
 }
 
-.info .card-header {
+.card-header {
   border-bottom: 1px solid #999;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-.info .card-body {
+.card-body {
   font-size: 1rem;
 }
 
-.info .card-footer {
+.card-footer {
   border-top: 1px solid #999;
   font-size: 0.9rem;
   font-weight: 300;
@@ -334,20 +333,20 @@ that are children of an element with the class .mynavbar.
 }
 
 .rsvp button {
-  background-color: var(--pink);
+  background-color: var(--terracota);
   color: white;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--terracota);
 }
 
 .rsvp button:hover {
   background-color: white;
-  color: var(--pink);
+  color: var(--terracota);
   border: 1px solid white;
 }
 
 footer {
   padding: 3rem;
-  background-color: var(--pink);
+  background-color: var(--terracota);
   color: white;
 }
 
@@ -501,4 +500,20 @@ footer li {
   .timeline li .timeline-panel::after {
     top: 31px;
   }
+}
+
+.simply-countdown > .simply-section {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.simply-countdown > .simply-section .simply-amount {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

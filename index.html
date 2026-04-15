@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wedding Invitation</title>
+    <title>Invitación de Boda</title>
     <link rel="icon" href="https://www.svgrepo.com/show/214817/wedding-marry.svg" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
 
@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sekuya&display=swap" rel="stylesheet">
 
     <!-- SimplyCountdown.js -->
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
@@ -26,10 +27,10 @@
   <body>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
       <main>
-        <h4>To <span> Father/Mother/Brother</span></h4>
-        <h1>Husband & Wife</h1>
-        <p>La boda será en:</p>
-        <!-- Letak sini sbb nk display countdown sini -->
+        <h1 class="titulo-portada">Diego & Sofía</h1>
+        <p class="parrafo-portada">Junto con:</p>
+        <h1 class="titulo-portada">Jeferson & Karolain</h1>
+        <p class="parrafo-portada">Los invitan a la boda que será en:</p>
         <div class="simply-countdown"></div>
         <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Mira la invitación</a>
       </main>
@@ -38,7 +39,7 @@
     <!-- OffCanvas NavBar-->
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
-        <a class="navbar-brand" href="#">Diansoda</a>
+        <a class="navbar-brand" href="#">Portada</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -49,12 +50,10 @@
           </div>
           <div class="offcanvas-body">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#info">Info</a>
-              <a class="nav-link" href="#story">Story</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#rsvp">RSVP</a>
-              <a class="nav-link" href="#gifts">Gifts</a>
+              <a class="nav-link" href="#home">Inicio</a>
+              <a class="nav-link" href="#info">Información</a>
+              <a class="nav-link" href="#gallery">Galería</a>
+              <a class="nav-link" href="#gifts">Música</a>
             </div>
           </div>
         </div>
@@ -66,9 +65,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h2>Weddings</h2>
-            <h3>Será en Nombiembre 7, 2026 en Quito</h3>
-            <p>Therefore, with all due respect, we intend to invite you, brothers and sisters, to attend our wedding.</p>
+            <h2>Boda</h2>
+            <h3>Será el 7 de Nombiembre del 2026 en Quito</h3>
+            <p>Queremos que formen parte de este maravilloso momento junto a nosotros.</p>
           </div>
         </div>
 
@@ -76,13 +75,7 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col-8 text-end">
-                <h3>Husband</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque praesentium aut ipsa perferendis, incidunt soluta?</p>
-                <p>
-                  Putra from father. Lorem <br />
-                  & <br />
-                  mother Ipsum
-                </p>
+                <h3>Diego Ponce</h3>
               </div>
               <div class="col-4">
                 <img src="img/husband.jpeg" alt="Husband" class="img-responsive rounded-circle" />
@@ -99,13 +92,34 @@
                 <img src="img/wife.png" alt="Wife" class="img-responsive rounded-circle" />
               </div>
               <div class="col-8">
-                <h3>Wife</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque praesentium aut ipsa perferendis, incidunt soluta?</p>
-                <p>
-                  Putra from father. Ipsum <br />
-                  & <br />
-                  mather Lorem
-                </p>
+                <h3>Sofía Ortiz</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row couple">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-8 text-end">
+                <h3>Jeferson Vergara</h3>
+              </div>
+              <div class="col-4">
+                <img src="img/husband.jpeg" alt="Husband" class="img-responsive rounded-circle" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Icon heart letak sini -->
+          <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-4">
+                <img src="img/wife.png" alt="Wife" class="img-responsive rounded-circle" />
+              </div>
+              <div class="col-8">
+                <h3>Karolain Ortiz</h3>
               </div>
             </div>
           </div>
@@ -118,123 +132,65 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <h2>Event Information</h2>
+            <h2>Información</h2>
             <p class="alamat">
-              Address: Grandara hall depan SK Pendek, PT 1047. <br />
-              PT 1047, Lorong Pengkalan Penambang, 15100 Kota Bharu, Kelantan.
+              Dirección: Swissôtel Quito, Ave 12 de Octubre 1820 y, Quito, Pichincha 170109, Ecuador <br />
             </p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.080961089143!2d102.2205594!3d6.060344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b6a5034cdf6dbd%3A0x7c1ff987016ac709!2sGrandara%20Hall%2C%20Kota%20Bharu!5e0!3m2!1sen!2smy!4v1716214390765!5m2!1sen!2smy"
-              width="100%"
-              height="250"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <a href="https://maps.app.goo.gl/EP3osshD7ytzMAux8" target="_blank" class="btn btn-light btn-sm my-3">Click to open the map</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7927227406694!2d-78.48803602503538!3d-0.20523949979273826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a0dec20b09f%3A0x14d611e35be667c0!2sSwiss%C3%B4tel%20Quito!5e0!3m2!1ses-419!2sec!4v1776224824471!5m2!1ses-419!2sec" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://maps.app.goo.gl/zex9nZv4TUQ7pAP59" target="_blank" class="btn btn-light btn-sm my-3">Click para abrir el mapa</a>
             <p class="description">
-              It is hoped that the address and date will not be mistaken. If you arrive at your destination but there are no signs of a wedding taking place, it could be that you have the wrong schedule or the wrong place.
-            </p>
+              Esperamos que con este mapa puedan llegar sin problemas al lugar de la ceremonia. Si tienen alguna duda, no duden en contactarnos.
           </div>
         </div>
 
         <div class="row justify-content-center mt-4">
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light mb-5">
-              <div class="card-header">Akad Nikah</div>
+              <div class="card-header">Misa</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>08.00 - 10.00</span>
+                    <span>15:00 - 17:00</span>
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar3 d-block"></i>
-                    <span>Saturday, 20 November 2023</span>
+                    <span>Sábado, 7 Noviembre 2026</span>
                   </div>
                 </div>
               </div>
-              <div class="card-footer">It is hoped that the ceremony will be conducive to maintaining the solemnity and solemnity of the entire procession.</div>
+              <div class="card-footer">Se espera que la ceremonia sea propicia para mantener la solemnidad y seriedad de todo el cortejo.</div>
             </div>
           </div>
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light">
-              <div class="card-header">RECEPTION</div>
+              <div class="card-header">RECEPCIÓN</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>11.00 - done</span>
+                    <span>18:00 - 12:00</span>
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar3 d-block"></i>
-                    <span>Sunday, 20 November 2023</span>
+                    <span>Domingo, 7 Noviembre 2026</span>
                   </div>
                 </div>
               </div>
-              <div class="card-footer">It is hoped that the ceremony will be conducive to maintaining the solemnity and solemnity of the entire procession.</div>
+              <div class="card-footer">Se espera que la ceremonia sea propicia para mantener la solemnidad y seriedad de todo el cortejo.</div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End Info -->
-
-    <!-- Story section -->
-    <section id="story" class="story">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-10 text-center">
-            <span>How Our Love Bloomed</span>
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, similique non soluta nulla asperiores voluptatem.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image" style="background-image: url(https://picsum.photos/302/302)"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3>First meeting</h3>
-                    <span>1 Juni 2000</span>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, modi autem? Commodi autem quo quia?</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image" style="background-image: url(https://picsum.photos/300/300)"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3>Get serious</h3>
-                    <span>1 Januari 2005</span>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto enim eaque obcaecati odit itaque explicabo quisquam quos at.</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="timeline-image" style="background-image: url(https://picsum.photos/301/301)"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3>Fiance</h3>
-                    <span>7 November 2009</span>
-                  </div>
-                  <div class="timeline-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, deleniti distinctio. Esse quas sit explicabo corporis magni qui expedita a.</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Story section End -->
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
@@ -244,10 +200,10 @@
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
             <!-- Subtitle and heading for the gallery -->
-            <span>Our Memories</span>
-            <h2>Gallery</h2>
+            <span>Nuestras Memorias</span>
+            <h2>Galería</h2>
             <!-- Description text under the heading -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, itaque?</p>
+            <p>Esta galería es para que compartan sus momentos más preciados con nosotros.</p>
           </div>
         </div>
 
@@ -294,65 +250,14 @@
     </section>
     <!-- Gallery Section End -->
 
-    <!-- Attendance form section -->
-    <section id="rsvp" class="rsvp">
-      <div class="container">
-        <div class="row justify-content-center">
-          <!-- Column for the title and description of the form -->
-          <div class="col-md-8 col-10 text-center">
-            <h2>Confirmation of Attendance</h2>
-            <p>Fill out the form below to confirm attendance.</p>
-          </div>
-        </div>
-
-        <!-- Form for attendance confirmation -->
-        <!-- The form uses POST method to send data to a Google Script URL -->
-        <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" action="https://script.google.com/macros/s/AKfycbxccgG4ZLJLrIbxq-0r62c_cWDBEIWxwRkNIO3DHLKWkvXyj9ms_ShaBV1cEnOkpZIE/exec" id="my-form">
-          <!-- Input field for Name -->
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="nama" class="form-label">Name</label>
-              <input type="text" class="form-control" id="nama" name="nama" />
-            </div>
-          </div>
-
-          <!-- Input field for Total (number of attendees) -->
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="jumlah" class="form-label">Total</label>
-              <input type="number" class="form-control" id="jumlah" name="jumlah" min="1" max="5" length="1" value="1" />
-            </div>
-          </div>
-
-          <!-- Dropdown for confirming attendance status -->
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="status" class="form-label">Confirm</label>
-              <select name="status" id="status" class="form-select">
-                <option selected>Choose</option>
-                <option value="Hadir">Attend</option>
-                <option value="Tidak Hadir">Absent</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Submit button to send the form data -->
-          <div class="col-12" style="margin-top: 35px">
-            <button class="btn btn-primary">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
-    <!-- Attendance form end -->
-
     <!-- Gift -->
-    <section id="gifts" class="gifts">
+    <section id="gifts" class="info">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>EXPRESSION OF LOVE</span>
-            <h2>Send Gifts</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure perferendis provident ab aliquam nemo.</p>
+            <span>EXPRESIÓN DE AMOR</span>
+            <h2>Música</h2>
+            <p>Sugiere canciones para la ceremonia</p>
           </div>
         </div>
 
@@ -360,11 +265,10 @@
           <div class="col-md-6">
             <ul class="list-group">
               <li class="list-group-item">
-                <div class="fw-bold">CIMB BANK</div>
-                1234567 - ZULHUSNI
+                <div class="fw-bold">Código de Spotify</div>
               </li>
               <li class="list-group-item">
-                <div class="fw-bold">QR Code</div>
+                <div class="fw-bold">QR Código</div>
                 <img src="https://img.freepik.com/premium-vector/qr-code-cartoon-character-doing-wave-hand-gesture-cute-design_152558-13573.jpg" alt="QR" class="img-thumbnail" width="150" />
               </li>
             </ul>
@@ -377,30 +281,6 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <small class="block">&copy; 2023 Zul Wedding. All Rights Reserved.</small>
-            <small class="block">Design by <a href="https://instagram.com/zlhsny._" target="_blank">@zulhusni</a>.</small>
-
-            <ul class="mt-3">
-              <li>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-youtube"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="bi bi-tiktok"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </footer>
     <!-- Footer End -->
@@ -554,5 +434,9 @@
         });
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    
+    <script src="countdown.js"></script>
   </body>
 </html>
