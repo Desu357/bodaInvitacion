@@ -5,475 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Invitación de Boda — Diego & Sofía · Jeferson & Karolain</title>
     <link rel="icon" href="https://www.svgrepo.com/show/214817/wedding-marry.svg" type="image/x-icon" />
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-
-    <style>
-      :root {
-        --champagne: #f5ede0;
-        --cream: #fdf8f2;
-        --gold: #b89b6a;
-        --gold-light: #d4b896;
-        --dark: #2c2416;
-        --muted: #7a6a55;
-        --rose: #c4816e;
-      }
-
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-
-      html { scroll-behavior: smooth; }
-
-      body {
-        font-family: 'Jost', sans-serif;
-        background: var(--cream);
-        color: var(--dark);
-        font-weight: 300;
-      }
-
-      /* ── HERO ── */
-      #hero {
-        min-height: 100vh;
-        background: linear-gradient(160deg, #1a130a 0%, #2c1f10 50%, #3d2b16 100%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-        position: relative;
-        overflow: hidden;
-      }
-
-      #hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(180,155,106,0.15) 0%, transparent 70%);
-      }
-
-      .hero-ornament {
-        font-family: 'Cormorant Garamond', serif;
-        font-style: italic;
-        color: var(--gold-light);
-        font-size: 1rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        opacity: 0.7;
-        margin-bottom: 1rem;
-      }
-
-      .hero-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 300;
-        font-size: clamp(2.8rem, 8vw, 5.5rem);
-        color: #fff;
-        line-height: 1.1;
-        margin-bottom: 0.3rem;
-      }
-
-      .hero-divider {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        justify-content: center;
-        margin: 1.2rem 0;
-      }
-
-      .hero-divider span { color: var(--gold); font-size: 1.2rem; }
-      .hero-divider::before,
-      .hero-divider::after {
-        content: '';
-        height: 1px;
-        width: 60px;
-        background: var(--gold);
-        opacity: 0.5;
-      }
-
-      .hero-date {
-        color: var(--champagne);
-        font-weight: 400;
-        font-size: 1.05rem;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        margin-bottom: 2.5rem;
-      }
-
-      /* COUNTDOWN */
-      .countdown-wrap {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 2.5rem;
-      }
-
-      .cd-box {
-        text-align: center;
-        min-width: 70px;
-      }
-
-      .cd-num {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: #fff;
-        line-height: 1;
-      }
-
-      .cd-label {
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--gold-light);
-        margin-top: 0.3rem;
-      }
-
-      .cd-sep {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2.5rem;
-        color: var(--gold);
-        opacity: 0.5;
-        align-self: flex-start;
-        padding-top: 0.1rem;
-      }
-
-      .btn-hero {
-        display: inline-block;
-        border: 1px solid var(--gold);
-        color: var(--gold);
-        padding: 0.75rem 2.5rem;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        text-decoration: none;
-        transition: all 0.3s;
-        background: transparent;
-        cursor: pointer;
-      }
-
-      .btn-hero:hover {
-        background: var(--gold);
-        color: var(--dark);
-      }
-
-      /* ── NAVBAR ── */
-      .mynavbar {
-        background: rgba(253, 248, 242, 0.95);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(184,155,106,0.2);
-      }
-
-      .mynavbar .navbar-brand {
-        font-family: 'Cormorant Garamond', serif;
-        font-style: italic;
-        color: var(--gold) !important;
-        font-size: 1.3rem;
-      }
-
-      .mynavbar .nav-link {
-        color: var(--muted) !important;
-        letter-spacing: 0.15em;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        transition: color 0.2s;
-      }
-
-      .mynavbar .nav-link:hover { color: var(--gold) !important; }
-
-      /* ── SECTION SHARED ── */
-      section { padding: 5rem 0; }
-
-      .section-label {
-        font-size: 0.7rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 0.5rem;
-      }
-
-      .section-title {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 300;
-        margin-bottom: 1rem;
-      }
-
-      .thin-rule {
-        width: 60px;
-        height: 1px;
-        background: var(--gold);
-        margin: 1.2rem auto;
-        opacity: 0.5;
-      }
-
-      /* ── HOME / COUPLES ── */
-      #home { background: var(--cream); }
-
-      .couple-block {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin: 3rem 0;
-      }
-
-      .couple-name {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.6rem;
-        font-style: italic;
-        color: var(--dark);
-        font-weight: 400;
-      }
-
-      .couple-img {
-        width: 190px;
-        height: 190px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--gold-light);
-        background: var(--champagne);
-      }
-
-      .heart-icon {
-        color: var(--rose);
-        font-size: 1.5rem;
-      }
-
-      .couple-sep {
-        width: 1px;
-        height: 60px;
-        background: var(--gold);
-        opacity: 0.3;
-        margin: 1.5rem auto;
-      }
-
-      /* ── INFO ── */
-      #info { background: var(--champagne); }
-
-      .event-card {
-        border: 1px solid rgba(184,155,106,0.3);
-        background: var(--cream);
-        padding: 2rem;
-        text-align: center;
-        position: relative;
-      }
-
-      .event-card::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        width: 40px; height: 2px;
-        background: var(--gold);
-      }
-
-      .event-card .event-type {
-        font-size: 0.65rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 1rem;
-      }
-
-      .event-card .event-time {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 2rem;
-        color: var(--dark);
-      }
-
-      .event-card .event-date {
-        font-size: 0.85rem;
-        color: var(--muted);
-        margin-top: 0.3rem;
-      }
-
-      .event-card .event-desc {
-        font-size: 0.82rem;
-        color: var(--muted);
-        margin-top: 1.2rem;
-        font-style: italic;
-      }
-
-      .map-wrapper {
-        border: 1px solid rgba(184,155,106,0.3);
-        overflow: hidden;
-        margin: 2rem 0 1rem;
-      }
-
-      /* ── QR SECTIONS ── */
-      #fotos { background: var(--cream); }
-      #musica { background: var(--champagne); }
-
-      .qr-card {
-        border: 1px solid rgba(184,155,106,0.3);
-        background: var(--cream);
-        padding: 2.5rem 2rem;
-        text-align: center;
-        max-width: 340px;
-        margin: 0 auto;
-      }
-
-      #fotos .qr-card { background: var(--champagne); border-color: rgba(196,129,110,0.3); }
-
-      .qr-card .qr-icon {
-        font-size: 2.5rem;
-        color: var(--gold);
-        margin-bottom: 1rem;
-      }
-
-      #fotos .qr-card .qr-icon { color: var(--rose); }
-
-      .qr-card h4 {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.5rem;
-        font-style: italic;
-        margin-bottom: 0.5rem;
-      }
-
-      .qr-card p {
-        font-size: 0.85rem;
-        color: var(--muted);
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .qr-placeholder {
-        width: 160px;
-        height: 160px;
-        margin: 0 auto 1.2rem;
-        border: 1px dashed rgba(184,155,106,0.5);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: var(--muted);
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        gap: 0.5rem;
-        background: #fff;
-      }
-
-      /* Si tienes una imagen QR real, reemplaza .qr-placeholder por un <img> */
-      .qr-placeholder i { font-size: 2rem; opacity: 0.4; }
-
-      .qr-note {
-        font-size: 0.7rem;
-        color: var(--muted);
-        opacity: 0.8;
-        margin-top: 1rem;
-        font-style: italic;
-      }
-
-      .btn-gold {
-        display: inline-block;
-        background: var(--gold);
-        color: #fff;
-        padding: 0.6rem 1.8rem;
-        letter-spacing: 0.15em;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-
-      .btn-gold:hover { background: var(--dark); color: #fff; }
-
-      .btn-rose {
-        display: inline-block;
-        background: var(--rose);
-        color: #fff;
-        padding: 0.6rem 1.8rem;
-        letter-spacing: 0.15em;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-
-      .btn-rose:hover { background: var(--dark); color: #fff; }
-
-      /* ── FOOTER ── */
-      footer {
-        background: var(--dark);
-        color: var(--champagne);
-        text-align: center;
-        padding: 3rem 1rem;
-      }
-
-      footer .footer-names {
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 1.6rem;
-        font-style: italic;
-        color: var(--gold-light);
-        margin-bottom: 0.5rem;
-      }
-
-      footer .footer-date {
-        font-size: 0.75rem;
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 1.5rem;
-      }
-
-      footer .footer-msg {
-        font-size: 0.85rem;
-        color: rgba(245,237,224,0.5);
-        font-style: italic;
-        max-width: 400px;
-        margin: 0 auto;
-        line-height: 1.8;
-      }
-
-      /* ── AUDIO ── */
-      #audio-container {
-        position: fixed;
-        bottom: 1.5rem;
-        right: 1.5rem;
-        z-index: 9999;
-      }
-
-      .audio-icon-wrapper {
-        width: 46px;
-        height: 46px;
-        background: var(--gold);
-        border-radius: 50%;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        transition: background 0.2s;
-      }
-
-      .audio-icon-wrapper:hover { background: var(--dark); }
-      .audio-icon-wrapper i { color: #fff; font-size: 1.1rem; }
-
-      @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-
-      .audio-icon-wrapper .bi-disc { animation: spin 3s linear infinite; }
-
-      /* Responsive */
-      @media (max-width: 576px) {
-        .couple-block { gap: 1rem; }
-        .couple-name { font-size: 1.3rem; }
-      }
-    </style>
+    
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-
-    <!-- ── HERO ── -->
     <section id="hero">
       <div style="position:relative; z-index:1;">
         <p class="hero-ornament">7 · noviembre · 2026</p>
@@ -483,7 +25,6 @@
 
         <p class="hero-date" style="margin-top:1.5rem;">Quito, Ecuador</p>
 
-        <!-- Countdown -->
         <div class="countdown-wrap" id="countdown">
           <div class="cd-box">
             <div class="cd-num" id="cd-days">000</div>
@@ -510,7 +51,6 @@
       </div>
     </section>
 
-    <!-- ── NAVBAR ── -->
     <nav class="navbar navbar-expand-md sticky-top mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">D y S · J y K</a>
@@ -534,7 +74,6 @@
       </div>
     </nav>
 
-    <!-- ── HOME ── -->
     <section id="home">
       <div class="container text-center">
         <p class="section-label">Con amor</p>
@@ -544,7 +83,6 @@
           Queremos que formen parte de este maravilloso momento. Su presencia es el regalo más grande que podemos recibir.
         </p>
 
-        <!-- Couple 1 -->
         <div class="couple-block mt-5">
           <div class="text-end">
             <p class="couple-name">Diego Ponce</p>
@@ -557,7 +95,6 @@
 
         <div class="couple-sep"></div>
 
-        <!-- Couple 2 -->
         <div class="couple-block">
           <div class="text-end">
             <p class="couple-name">Jeferson Vergara</p>
@@ -570,7 +107,6 @@
       </div>
     </section>
 
-    <!-- ── INFO ── -->
     <section id="info">
       <div class="container text-center">
         <p class="section-label">Detalles del evento</p>
@@ -622,11 +158,9 @@
         <a href="https://maps.app.goo.gl/zex9nZv4TUQ7pAP59" target="_blank" class="btn-gold" style="margin-bottom:3rem; display:inline-block;">
           <i class="bi bi-geo-alt me-1"></i> Abrir en Google Maps
         </a>
-        
       </div>
     </section>
 
-    <!-- ── FOTOS DEL DÍA (QR 1) ── -->
     <section id="fotos">
       <div class="container text-center">
         <p class="section-label">Tu recuerdo, nuestro tesoro</p>
@@ -640,17 +174,15 @@
           <div class="qr-icon"><i class="bi bi-camera"></i></div>
           <h4>Comparte tus fotos</h4>
           <p>Escanea con la cámara de tu celular para subir tus imágenes directamente a nuestra carpeta compartida.</p>
-          <img src="img/QRFotos.png" width="160">
-          </div>
-
-          <a href="https://drive.google.com/drive/folders/1opGDJOwffVnVM1juyFYO-URgYJ_xoY-L?usp=sharing" target="_blank" class="btn-rose">
-            <i class="bi bi-upload me-1"></i> Subir fotos
-          </a>
+          <img src="img/QRFotos.png" width="160" alt="QR Fotos">
         </div>
+
+        <a href="https://drive.google.com/drive/folders/1opGDJOwffVnVM1juyFYO-URgYJ_xoY-L?usp=sharing" target="_blank" class="btn-rose mt-4">
+          <i class="bi bi-upload me-1"></i> Subir fotos
+        </a>
       </div>
     </section>
 
-    <!-- ── MÚSICA (QR 2) ── -->
     <section id="musica">
       <div class="container text-center">
         <p class="section-label">Ponle ritmo a la celebración</p>
@@ -664,19 +196,18 @@
           <div class="qr-icon"><i class="bi bi-music-note-beamed"></i></div>
           <h4>Playlist colaborativa</h4>
           <p>Escanea con la cámara de tu celular para acceder a la playlist en Spotify y añadir tus canciones favoritas.</p>
+          <img src="img/QRMusica.png" width="160" alt="QR Musica">
+        </div>
 
-          <img src="img/QRMusica.png" width="160">
-          </div>
-
+        <div class="mt-4">
           <a href="https://open.spotify.com/playlist/7fSYB0CrC0KRFiaSf2kC5D?si=5218be126d174b91&pt=752028cfee778f3952d7ba00d92959f0" target="_blank" class="btn-gold">
             <i class="bi bi-spotify me-1"></i> Añadir canción
           </a>
-          <p class="qr-note">Crea una playlist colaborativa en Spotify · Genera el QR en qr-code-generator.com</p>
+          <p class="qr-note mt-2">Crea una playlist colaborativa en Spotify · Genera el QR en qr-code-generator.com</p>
         </div>
       </div>
     </section>
 
-    <!-- ── FOOTER ── -->
     <footer>
       <div class="footer-names">Diego & Sofía · Jeferson & Karolain</div>
       <div class="footer-date">7 · Noviembre · 2026 · Quito, Ecuador</div>
@@ -684,7 +215,6 @@
       <p style="font-size:0.65rem; color:var(--muted); margin-top:2rem; letter-spacing:0.1em;">HECHO CON ♥</p>
     </footer>
 
-    <!-- ── AUDIO ── -->
     <div id="audio-container">
       <audio id="song" autoplay loop>
         <source src="audio/ytmp3free.cc_love-youtubemp3free.org.mp3" type="audio/mp3" />
@@ -696,76 +226,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-
-    <script>
-      // ── Countdown a 7 de noviembre 2026, 15:00 ──
-      function updateCountdown() {
-        const target = new Date('2026-11-07T15:00:00');
-        const now = new Date();
-        const diff = target - now;
-
-        if (diff <= 0) {
-          document.getElementById('cd-days').textContent = '000';
-          return;
-        }
-
-        const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs  = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById('cd-days').textContent  = String(days).padStart(3, '0');
-        document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
-        document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
-      }
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-
-      // ── Scroll lock ──
-      const rootEl = document.documentElement;
-      function disableScroll() {
-        const scrollTop  = window.pageYOffset;
-        const scrollLeft = window.pageXOffset;
-        window.onscroll = () => window.scrollTo(scrollLeft, scrollTop);
-        rootEl.style.scrollBehavior = 'auto';
-      }
-      function enableScroll() {
-        window.onscroll = null;
-        rootEl.style.scrollBehavior = 'smooth';
-        playAudio();
-      }
-      disableScroll();
-
-      // ── Audio ──
-      const audioWrapper = document.querySelector('.audio-icon-wrapper');
-      const audioIcon    = audioWrapper.querySelector('i');
-      const song         = document.getElementById('song');
-      let isPlaying = false;
-
-      function playAudio() {
-        song.volume = 0.1;
-        audioWrapper.style.display = 'flex';
-        song.play();
-        isPlaying = true;
-      }
-
-      audioWrapper.onclick = () => {
-        if (isPlaying) {
-          song.pause();
-          audioIcon.className = 'bi bi-pause-circle';
-        } else {
-          song.play();
-          audioIcon.className = 'bi bi-disc';
-        }
-        isPlaying = !isPlaying;
-      };
-
-      // ── Offcanvas overflow fix ──
-      const stickyNav = document.querySelector('.sticky-top');
-      const offcanvas  = document.querySelector('.offcanvas');
-      offcanvas.addEventListener('show.bs.offcanvas',   () => stickyNav.style.overflow = 'visible');
-      offcanvas.addEventListener('hidden.bs.offcanvas', () => stickyNav.style.overflow = 'hidden');
-    </script>
+    
+    <script src="script.js"></script>
   </body>
 </html>
