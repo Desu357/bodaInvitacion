@@ -230,8 +230,8 @@
       }
 
       .couple-img {
-        width: 90px;
-        height: 90px;
+        width: 190px;
+        height: 190px;
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid var(--gold-light);
@@ -303,34 +303,9 @@
         margin: 2rem 0 1rem;
       }
 
-      /* ── GALLERY ── */
-      #gallery { background: var(--cream); }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 0.75rem;
-        margin-top: 2rem;
-      }
-
-      .gallery-grid img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.4s, opacity 0.3s;
-        filter: saturate(0.85);
-      }
-
-      .gallery-grid img:hover {
-        transform: scale(1.03);
-        filter: saturate(1);
-        opacity: 0.9;
-      }
-
       /* ── QR SECTIONS ── */
-      #fotos { background: var(--champagne); }
-      #musica { background: var(--cream); }
+      #fotos { background: var(--cream); }
+      #musica { background: var(--champagne); }
 
       .qr-card {
         border: 1px solid rgba(184,155,106,0.3);
@@ -538,7 +513,7 @@
     <!-- ── NAVBAR ── -->
     <nav class="navbar navbar-expand-md sticky-top mynavbar">
       <div class="container">
-        <a class="navbar-brand" href="#">D & S · J & K</a>
+        <a class="navbar-brand" href="#">D y S · J y K</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -551,7 +526,6 @@
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="#home">Inicio</a>
               <a class="nav-link" href="#info">Información</a>
-              <a class="nav-link" href="#gallery">Galería</a>
               <a class="nav-link" href="#fotos">Fotos del día</a>
               <a class="nav-link" href="#musica">Música</a>
             </div>
@@ -575,9 +549,7 @@
           <div class="text-end">
             <p class="couple-name">Diego Ponce</p>
           </div>
-          <img src="img/husband.jpeg" alt="Diego" class="couple-img" />
-          <span class="heart-icon"><i class="bi bi-heart-fill"></i></span>
-          <img src="img/wife.png" alt="Sofía" class="couple-img" />
+          <img src="img/DiegoSofi.jpg" alt="Diego" class="couple-img" />
           <div class="text-start">
             <p class="couple-name">Sofía Ortiz</p>
           </div>
@@ -590,9 +562,7 @@
           <div class="text-end">
             <p class="couple-name">Jeferson Vergara</p>
           </div>
-          <img src="img/husband.jpeg" alt="Jeferson" class="couple-img" />
-          <span class="heart-icon"><i class="bi bi-heart-fill"></i></span>
-          <img src="img/wife.png" alt="Karolain" class="couple-img" />
+          <img src="img/KaroJeff.jpeg" alt="Jeferson" class="couple-img" />
           <div class="text-start">
             <p class="couple-name">Karolain Ortiz</p>
           </div>
@@ -607,7 +577,38 @@
         <h2 class="section-title">Información</h2>
         <div class="thin-rule"></div>
 
-        <p style="color:var(--muted); font-size:0.9rem; margin-bottom:0.5rem;">
+        <div class="col-md-5 col-10 justify-content-center mx-auto">
+          <div class="event-card h-100">
+            <p class="event-type">Ceremonia · Misa</p>
+            <div class="event-time">15:00 — 17:00</div>
+            <div class="event-date">Sábado, 7 de Noviembre 2026</div>
+            <p class="event-desc">Se espera que los invitados lleguen con puntualidad para dar inicio a la ceremonia en un ambiente de solemnidad y alegría.</p>
+          </div>
+        </div>
+
+        <p style="color:var(--muted); font-size:0.9rem; margin:1rem;">
+          Santa Dorotea · Ave Huaynapalcón, Quito, Ecuador
+        </p>
+
+        <div class="map-wrapper mx-auto" style="max-width:700px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.78234946246!2d-78.5316253263292!3d-0.24329709975430694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5990ef39a3d23%3A0x8a41f22a08d0aaf8!2sSanta%20Dorotea!5e0!3m2!1ses!2sec!4v1776911693132!5m2!1ses!2sec" 
+          width="100%" height="380" style="border:0; display:block;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <a href="https://maps.app.goo.gl/L6C84PYSEQ6ZJzKk9" target="_blank" class="btn-gold" style="margin-bottom:3rem; display:inline-block;">
+          <i class="bi bi-geo-alt me-1"></i> Abrir en Google Maps
+        </a>
+          
+        <div class="col-md-5 col-10 justify-content-center mx-auto">
+          <div class="event-card h-100">
+            <p class="event-type">Fiesta · Recepción</p>
+            <div class="event-time">18:00 — 00:00</div>
+            <div class="event-date">Sábado, 7 de Noviembre 2026</div>
+            <p class="event-desc">La celebración continúa con cena, baile y momentos que quedarán en nuestra memoria para siempre.</p>
+          </div>
+        </div>
+
+          <p style="color:var(--muted); font-size:0.9rem; margin:1rem;">
           Swissôtel Quito · Ave 12 de Octubre 1820, Quito, Ecuador
         </p>
 
@@ -621,56 +622,7 @@
         <a href="https://maps.app.goo.gl/zex9nZv4TUQ7pAP59" target="_blank" class="btn-gold" style="margin-bottom:3rem; display:inline-block;">
           <i class="bi bi-geo-alt me-1"></i> Abrir en Google Maps
         </a>
-
-        <div class="row justify-content-center g-4 mt-2">
-          <div class="col-md-5 col-10">
-            <div class="event-card h-100">
-              <p class="event-type">Ceremonia · Misa</p>
-              <div class="event-time">15:00 — 17:00</div>
-              <div class="event-date">Sábado, 7 de Noviembre 2026</div>
-              <p class="event-desc">Se espera que los invitados lleguen con puntualidad para dar inicio a la ceremonia en un ambiente de solemnidad y alegría.</p>
-            </div>
-          </div>
-          <div class="col-md-5 col-10">
-            <div class="event-card h-100">
-              <p class="event-type">Fiesta · Recepción</p>
-              <div class="event-time">18:00 — 00:00</div>
-              <div class="event-date">Sábado, 7 de Noviembre 2026</div>
-              <p class="event-desc">La celebración continúa con cena, baile y momentos que quedarán en nuestra memoria para siempre.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── GALLERY ── -->
-    <section id="gallery">
-      <div class="container text-center">
-        <p class="section-label">Nuestros recuerdos</p>
-        <h2 class="section-title">Galería</h2>
-        <div class="thin-rule"></div>
-        <p style="color:var(--muted); font-size:0.88rem;">Una muestra de los momentos que nos trajeron hasta aquí.</p>
-
-        <div class="gallery-grid">
-          <a href="https://picsum.photos/id/300/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/300/400/500" alt="Foto 1" />
-          </a>
-          <a href="https://picsum.photos/id/301/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/301/400/500" alt="Foto 2" />
-          </a>
-          <a href="https://picsum.photos/id/302/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/302/400/500" alt="Foto 3" />
-          </a>
-          <a href="https://picsum.photos/id/304/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/304/400/500" alt="Foto 4" />
-          </a>
-          <a href="https://picsum.photos/id/305/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/305/400/500" alt="Foto 5" />
-          </a>
-          <a href="https://picsum.photos/id/306/1200/768" data-toggle="lightbox" data-gallery="boda">
-            <img src="https://picsum.photos/id/306/400/500" alt="Foto 6" />
-          </a>
-        </div>
+        
       </div>
     </section>
 
