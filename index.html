@@ -5,26 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Invitación de Boda — Diego & Sofía · Jeferson & Karolain</title>
     <link rel="icon" href="https://www.svgrepo.com/show/214817/wedding-marry.svg" type="image/x-icon" />
-    
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-    
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+
+    <!-- ── HERO ── -->
     <section id="hero">
-      <div style="position:relative; z-index:1;">
+      <div class="hero-content">
         <p class="hero-ornament">7 · noviembre · 2026</p>
         <h1 class="hero-title">Diego & Sofía</h1>
         <div class="hero-divider"><span>✦</span></div>
         <h1 class="hero-title">Jeferson & Karolain</h1>
+        <p class="hero-date">Quito, Ecuador</p>
 
-        <p class="hero-date" style="margin-top:1.5rem;">Quito, Ecuador</p>
-
+        <!-- Countdown -->
         <div class="countdown-wrap" id="countdown">
           <div class="cd-box">
             <div class="cd-num" id="cd-days">000</div>
@@ -47,10 +55,11 @@
           </div>
         </div>
 
-        <a href="#home" class="btn-hero" onclick="enableScroll()">Ver la invitación</a>
+        <a href="#home" class="btn-hero" id="btn-ver-invitacion">Ver la invitación</a>
       </div>
     </section>
 
+    <!-- ── NAVBAR ── -->
     <nav class="navbar navbar-expand-md sticky-top mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">D y S · J y K</a>
@@ -74,20 +83,22 @@
       </div>
     </nav>
 
+    <!-- ── HOME ── -->
     <section id="home">
       <div class="container text-center">
         <p class="section-label">Con amor</p>
         <h2 class="section-title">Nos Casamos</h2>
         <div class="thin-rule"></div>
-        <p style="color:var(--muted); max-width:500px; margin:0 auto; line-height:1.8; font-size:0.95rem;">
+        <p class="section-desc">
           Queremos que formen parte de este maravilloso momento. Su presencia es el regalo más grande que podemos recibir.
         </p>
 
+        <!-- Pareja 1 -->
         <div class="couple-block mt-5">
           <div class="text-end">
             <p class="couple-name">Diego Ponce</p>
           </div>
-          <img src="img/DiegoSofi.jpg" alt="Diego" class="couple-img" />
+          <img src="img/DiegoSofi.jpg" alt="Diego y Sofía" class="couple-img" />
           <div class="text-start">
             <p class="couple-name">Sofía Ortiz</p>
           </div>
@@ -95,11 +106,12 @@
 
         <div class="couple-sep"></div>
 
+        <!-- Pareja 2 -->
         <div class="couple-block">
           <div class="text-end">
             <p class="couple-name">Jeferson Vergara</p>
           </div>
-          <img src="img/KaroJeff.jpeg" alt="Jeferson" class="couple-img" />
+          <img src="img/KaroJeff.jpeg" alt="Jeferson y Karolain" class="couple-img" />
           <div class="text-start">
             <p class="couple-name">Karolain Ortiz</p>
           </div>
@@ -107,14 +119,16 @@
       </div>
     </section>
 
+    <!-- ── INFO ── -->
     <section id="info">
       <div class="container text-center">
         <p class="section-label">Detalles del evento</p>
         <h2 class="section-title">Información</h2>
         <div class="thin-rule"></div>
 
-        <div class="col-md-5 col-10 justify-content-center mx-auto">
-          <div class="event-card h-100">
+        <!-- Ceremonia -->
+        <div class="col-md-5 col-10 mx-auto">
+          <div class="event-card">
             <p class="event-type">Ceremonia · Misa</p>
             <div class="event-time">15:00 — 17:00</div>
             <div class="event-date">Sábado, 7 de Noviembre 2026</div>
@@ -122,21 +136,22 @@
           </div>
         </div>
 
-        <p style="color:var(--muted); font-size:0.9rem; margin:1rem;">
-          Santa Dorotea · Ave Huaynapalcón, Quito, Ecuador
-        </p>
+        <p class="location-text">Santa Dorotea · Ave Huaynapalcón, Quito, Ecuador</p>
 
-        <div class="map-wrapper mx-auto" style="max-width:700px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.78234946246!2d-78.5316253263292!3d-0.24329709975430694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5990ef39a3d23%3A0x8a41f22a08d0aaf8!2sSanta%20Dorotea!5e0!3m2!1ses!2sec!4v1776911693132!5m2!1ses!2sec" 
-          width="100%" height="380" style="border:0; display:block;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-wrapper mx-auto">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.78234946246!2d-78.5316253263292!3d-0.24329709975430694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5990ef39a3d23%3A0x8a41f22a08d0aaf8!2sSanta%20Dorotea!5e0!3m2!1ses!2sec!4v1776911693132!5m2!1ses!2sec"
+            width="100%" height="380" style="border:0; display:block;" allowfullscreen="" loading="lazy">
+          </iframe>
         </div>
 
-        <a href="https://maps.app.goo.gl/L6C84PYSEQ6ZJzKk9" target="_blank" class="btn-gold" style="margin-bottom:3rem; display:inline-block;">
+        <a href="https://maps.app.goo.gl/L6C84PYSEQ6ZJzKk9" target="_blank" class="btn-gold map-btn">
           <i class="bi bi-geo-alt me-1"></i> Abrir en Google Maps
         </a>
-          
-        <div class="col-md-5 col-10 justify-content-center mx-auto">
-          <div class="event-card h-100">
+
+        <!-- Recepción -->
+        <div class="col-md-5 col-10 mx-auto">
+          <div class="event-card">
             <p class="event-type">Fiesta · Recepción</p>
             <div class="event-time">18:00 — 00:00</div>
             <div class="event-date">Sábado, 7 de Noviembre 2026</div>
@@ -144,29 +159,28 @@
           </div>
         </div>
 
-          <p style="color:var(--muted); font-size:0.9rem; margin:1rem;">
-          Swissôtel Quito · Ave 12 de Octubre 1820, Quito, Ecuador
-        </p>
+        <p class="location-text">Swissôtel Quito · Ave 12 de Octubre 1820, Quito, Ecuador</p>
 
-        <div class="map-wrapper mx-auto" style="max-width:700px;">
+        <div class="map-wrapper mx-auto">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7927227406694!2d-78.48803602503538!3d-0.20523949979273826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a0dec20b09f%3A0x14d611e35be667c0!2sSwiss%C3%B4tel%20Quito!5e0!3m2!1ses-419!2sec!4v1776224824471!5m2!1ses-419!2sec"
             width="100%" height="380" style="border:0; display:block;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
 
-        <a href="https://maps.app.goo.gl/zex9nZv4TUQ7pAP59" target="_blank" class="btn-gold" style="margin-bottom:3rem; display:inline-block;">
+        <a href="https://maps.app.goo.gl/zex9nZv4TUQ7pAP59" target="_blank" class="btn-gold map-btn">
           <i class="bi bi-geo-alt me-1"></i> Abrir en Google Maps
         </a>
       </div>
     </section>
 
+    <!-- ── FOTOS DEL DÍA (QR 1) ── -->
     <section id="fotos">
       <div class="container text-center">
         <p class="section-label">Tu recuerdo, nuestro tesoro</p>
         <h2 class="section-title">Sube tus Fotos</h2>
         <div class="thin-rule"></div>
-        <p style="color:var(--muted); max-width:480px; margin:0 auto 2.5rem; font-size:0.9rem; line-height:1.8;">
+        <p class="section-desc">
           ¿Tomaste fotos ese día? ¡Queremos verlas! Escanea el código QR o haz clic en el botón para subir tus fotos a nuestra galería compartida.
         </p>
 
@@ -174,59 +188,59 @@
           <div class="qr-icon"><i class="bi bi-camera"></i></div>
           <h4>Comparte tus fotos</h4>
           <p>Escanea con la cámara de tu celular para subir tus imágenes directamente a nuestra carpeta compartida.</p>
-          <img src="img/QRFotos.png" width="160" alt="QR Fotos">
+          <img src="img/QRFotos.png" alt="QR Subir Fotos" class="qr-img" />
+          <a href="https://drive.google.com/drive/folders/1opGDJOwffVnVM1juyFYO-URgYJ_xoY-L?usp=sharing" target="_blank" class="btn-rose">
+            <i class="bi bi-upload me-1"></i> Subir fotos
+          </a>
         </div>
-
-        <a href="https://drive.google.com/drive/folders/1opGDJOwffVnVM1juyFYO-URgYJ_xoY-L?usp=sharing" target="_blank" class="btn-rose mt-4">
-          <i class="bi bi-upload me-1"></i> Subir fotos
-        </a>
       </div>
     </section>
 
+    <!-- ── MÚSICA (QR 2) ── -->
     <section id="musica">
       <div class="container text-center">
         <p class="section-label">Ponle ritmo a la celebración</p>
         <h2 class="section-title">Sugiere Canciones</h2>
         <div class="thin-rule"></div>
-        <p style="color:var(--muted); max-width:480px; margin:0 auto 2.5rem; font-size:0.9rem; line-height:1.8;">
-          ¿Tienes una canción que no puede faltar en nuestra boda? Escanea el QR para añadirla a la playlist colaborativa de Spotify o sugerir tu tema favorito.
+        <p class="section-desc">
+          ¿Tienes una canción que no puede faltar en nuestra boda? Escanea el QR para añadirla a la playlist colaborativa de Spotify.
         </p>
 
         <div class="qr-card">
           <div class="qr-icon"><i class="bi bi-music-note-beamed"></i></div>
           <h4>Playlist colaborativa</h4>
           <p>Escanea con la cámara de tu celular para acceder a la playlist en Spotify y añadir tus canciones favoritas.</p>
-          <img src="img/QRMusica.png" width="160" alt="QR Musica">
-        </div>
-
-        <div class="mt-4">
+          <img src="img/QRMusica.png" alt="QR Spotify" class="qr-img" />
           <a href="https://open.spotify.com/playlist/7fSYB0CrC0KRFiaSf2kC5D?si=5218be126d174b91&pt=752028cfee778f3952d7ba00d92959f0" target="_blank" class="btn-gold">
             <i class="bi bi-spotify me-1"></i> Añadir canción
           </a>
-          <p class="qr-note mt-2">Crea una playlist colaborativa en Spotify · Genera el QR en qr-code-generator.com</p>
         </div>
       </div>
     </section>
 
+    <!-- ── FOOTER ── -->
     <footer>
       <div class="footer-names">Diego & Sofía · Jeferson & Karolain</div>
       <div class="footer-date">7 · Noviembre · 2026 · Quito, Ecuador</div>
       <p class="footer-msg">"El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección."</p>
-      <p style="font-size:0.65rem; color:var(--muted); margin-top:2rem; letter-spacing:0.1em;">HECHO CON ♥</p>
+      <p class="footer-credit">HECHO CON ♥</p>
     </footer>
 
+    <!-- ── AUDIO ── -->
     <div id="audio-container">
       <audio id="song" autoplay loop>
         <source src="audio/ytmp3free.cc_love-youtubemp3free.org.mp3" type="audio/mp3" />
       </audio>
-      <div class="audio-icon-wrapper" style="display:none;">
+      <div class="audio-icon-wrapper">
         <i class="bi bi-disc"></i>
       </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox -->
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-    
-    <script src="script.js"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
   </body>
 </html>
