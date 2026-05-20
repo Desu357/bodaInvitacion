@@ -550,3 +550,75 @@ footer {
     max-width: 90%;
   }
 }
+
+/* ── CARRUSEL PERSONALIZADO ── */
+.custom-carousel {
+  max-width: 600px; /* Ancho máximo ideal para móviles y escritorio */
+  border: 1px solid rgba(184, 155, 106, 0.3); /* Borde dorado sutil */
+  padding: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(44, 36, 22, 0.05);
+}
+
+.custom-carousel .carousel-inner {
+  border-radius: 2px; /* Mantiene la estética de líneas rectas del diseño */
+  overflow: hidden;
+}
+
+.custom-carousel .carousel-item img {
+  height: 400px; /* Altura fija para que todas las fotos se vean uniformes */
+  object-fit: cover; /* Recorta la imagen proporcionalmente sin deformarla */
+  background: var(--champagne);
+}
+
+/* Textos dentro del carrusel */
+.custom-carousel .carousel-caption {
+  background: linear-gradient(transparent, rgba(26, 19, 10, 0.75));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.custom-carousel .carousel-caption h5 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--champagne);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Indicadores (Puntitos de abajo) */
+.custom-carousel .carousel-indicators [data-bs-target] {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--gold-light);
+  border: none;
+  margin: 0 5px;
+  opacity: 0.5;
+}
+
+.custom-carousel .carousel-indicators .active {
+  background-color: var(--gold);
+  opacity: 1;
+}
+
+/* Flechas de navegación */
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: rgba(44, 36, 22, 0.4); /* Fondo oscuro translúcido para las flechas */
+  border-radius: 50%;
+  background-size: 55%;
+  width: 35px;
+  height: 35px;
+}
+
+/* Ajustes para pantallas pequeñas (Celulares) */
+@media (max-width: 576px) {
+  .custom-carousel .carousel-item img {
+    height: 300px; /* Un poco más bajo en pantallas de celular */
+  }
+}

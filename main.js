@@ -105,3 +105,24 @@ audioWrapper.addEventListener('click', () => {
  */
 offcanvas.addEventListener('show.bs.offcanvas',   () => stickyNav.style.overflow = 'visible');
 offcanvas.addEventListener('hidden.bs.offcanvas', () => stickyNav.style.overflow = 'hidden');
+
+// Inicializar manualmente el carrusel de Bootstrap con configuraciones personalizadas
+document.addEventListener('DOMContentLoaded', function () {
+  // Primer Carrusel
+  const firstCarousel = document.getElementById('weddingCarousel');
+  if (firstCarousel) {
+    new bootstrap.Carousel(firstCarousel, {
+      ride: 'carousel',
+      pause: 'hover'
+    });
+  }
+
+  // Segundo Carrusel
+  const secondCarousel = document.getElementById('weddingCarousel2');
+  if (secondCarousel) {
+    new bootstrap.Carousel(secondCarousel, {
+      ride: 'carousel',
+      pause: 'hover'
+    });
+  }
+});
