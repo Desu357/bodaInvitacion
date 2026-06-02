@@ -551,46 +551,57 @@ footer {
   }
 }
 
-/* ── CARRUSEL PERSONALIZADO ── */
+/* ═══════════════════════════════════════
+   ── CARRUSEL PERSONALIZADO ──
+═══════════════════════════════════════ */
+/* 1. El contenedor exterior (Estructura y diseño de tarjeta) */
 .custom-carousel {
-  max-width: 600px; /* Ancho máximo ideal para móviles y escritorio */
-  border: 1px solid rgba(184, 155, 106, 0.3); /* Borde dorado sutil */
+  max-width: 600px; 
+  border: 1px solid rgba(184, 155, 106, 0.3); 
   padding: 8px;
   background: #fff;
   box-shadow: 0 8px 24px rgba(44, 36, 22, 0.05);
+  border-radius: 2px; 
+  overflow: hidden;
+  margin-bottom: 3rem; /* Espaciado inferior uniforme */
 }
 
-.custom-carousel .carousel-inner {
-  border-radius: 2px; /* Mantiene la estética de líneas rectas del diseño */
+/* 2. El contenedor interno de Bootstrap */
+.carousel-inner {
+  border-radius: 2px;
   overflow: hidden;
 }
 
-.custom-carousel .carousel-item img {
-  height: 400px; /* Altura fija para que todas las fotos se vean uniformes */
-  object-fit: cover; /* Recorta la imagen proporcionalmente sin deformarla */
-  background: var(--champagne);
+/* 3. Las imágenes (Aquí ocurre la magia del escalado) */
+.carousel-item img {
+  width: 100%;
+  height: 480px; /* Altura fija ideal para pantallas de escritorio */
+  object-fit: cover; /* Llena el espacio perfectamente sin deformar la imagen */
+  object-position: center 22%; /* Centra el recorte priorizando los rostros */
+  background-color: var(--champagne); /* Fondo suave en armonía con la invitación */
+  transition: transform 0.6s ease-in-out;
 }
 
-/* Textos dentro del carrusel */
+/* 4. Textos superpuestos en las fotos (Gradiente elegante) */
 .custom-carousel .carousel-caption {
-  background: linear-gradient(transparent, rgba(26, 19, 10, 0.75));
+  background: linear-gradient(transparent, rgba(44, 36, 22, 0.85));
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1.5rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
 }
 
 .custom-carousel .carousel-caption h5 {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--champagne);
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.05em;
 }
 
-/* Indicadores (Puntitos de abajo) */
+/* 5. Indicadores de posición (Puntitos inferiores) */
 .custom-carousel .carousel-indicators [data-bs-target] {
   width: 7px;
   height: 7px;
@@ -599,6 +610,7 @@ footer {
   border: none;
   margin: 0 5px;
   opacity: 0.5;
+  transition: opacity 0.2s, background-color 0.2s;
 }
 
 .custom-carousel .carousel-indicators .active {
@@ -606,19 +618,33 @@ footer {
   opacity: 1;
 }
 
-/* Flechas de navegación */
+/* 6. Flechas de navegación (Izquierda y Derecha) */
 .custom-carousel .carousel-control-prev-icon,
 .custom-carousel .carousel-control-next-icon {
-  background-color: rgba(44, 36, 22, 0.4); /* Fondo oscuro translúcido para las flechas */
+  background-color: rgba(44, 36, 22, 0.5); /* Círculo translúcido oscuro */
   border-radius: 50%;
-  background-size: 55%;
-  width: 35px;
-  height: 35px;
+  background-size: 50%;
+  width: 38px;
+  height: 38px;
 }
 
-/* Ajustes para pantallas pequeñas (Celulares) */
+/* ═══════════════════════════════════════
+   RESPONSIVIDAD DEL CARRUSEL (Media Queries)
+═══════════════════════════════════════ */
+/* Tablets o pantallas medianas */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 380px; /* Reduce proporcionalmente la altura */
+  }
+}
+
+/* Celulares (Modo móvil) */
 @media (max-width: 576px) {
-  .custom-carousel .carousel-item img {
-    height: 300px; /* Un poco más bajo en pantallas de celular */
+  .carousel-item img {
+    height: 320px; /* Evita que la foto ocupe toda la pantalla del teléfono */
+  }
+  
+  .custom-carousel .carousel-caption h5 {
+    font-size: 1.15rem; /* Tipografía ligeramente más pequeña en móvil */
   }
 }
